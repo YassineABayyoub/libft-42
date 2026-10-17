@@ -6,7 +6,7 @@
 /*   By: yabouayy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 05:02:31 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/10/17 05:51:56 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/10/17 05:57:58 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-void	*memset(void *s, int c, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *dest, size_t n);
 
 #endif
