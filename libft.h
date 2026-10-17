@@ -6,7 +6,7 @@
 /*   By: yabouayy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 05:02:31 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/10/17 05:10:18 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/10/17 05:13:46 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
+int	ft_isascii(int c);
 
 #endif
