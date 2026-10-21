@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yabouayy <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: yabouayy <yabouayy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 05:02:31 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/10/17 06:31:54 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/10/22 00:35:06 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int		ft_isprint(int c);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *dest, size_t n);
 void	*ft_memcpy(void *s1, const void *s2, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
