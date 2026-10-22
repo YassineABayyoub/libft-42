@@ -6,13 +6,13 @@
 /*   By: yabouayy <yabouayy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 01:04:28 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/10/22 01:04:45 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/10/22 01:14:51 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
