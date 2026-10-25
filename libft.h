@@ -6,7 +6,7 @@
 /*   By: yabouayy <yabouayy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 05:02:31 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/10/25 15:41:10 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/10/25 15:44:56 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
-#include <unistd.h>
+# include <unistd.h>
 
 size_t	ft_strlen(const char *str);
 int		ft_isalpha(int c);
@@ -48,5 +48,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 #endif
