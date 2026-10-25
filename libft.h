@@ -6,7 +6,7 @@
 /*   By: yabouayy <yabouayy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 05:02:31 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/10/25 15:49:55 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/10/25 15:52:40 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
