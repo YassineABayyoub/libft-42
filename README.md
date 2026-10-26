@@ -129,7 +129,7 @@ All functions are declared in `libft.h`, which also includes `<stddef.h>`, `<std
 | `void ft_putendl_fd(char *s, int fd)` | Writes the string `s` followed by a newline to the file descriptor `fd`. |
 | `void ft_putnbr_fd(int n, int fd)` | Writes the integer `n` to the file descriptor `fd`. |
 
-### Bonus - Linked lists
+### Linked lists
 
 The list is built from the following structure:
 
@@ -157,7 +157,7 @@ typedef struct s_list
 
 ### References
 
-- `man 3` pages of the re-implemented functions (`man 3 strlcpy`, `man 3 memmove`, `man 3 atoi`, ...).
+- `man 3` and `man 3p` pages of the re-implemented functions (`man 3 strlcpy`, `man 3 memmove`, `man 3 atoi`, ...).
 - [cppreference - C standard library](https://en.cppreference.com/w/c) for the behaviour of the standard functions.
 - [GNU Make manual](https://www.gnu.org/software/make/manual/make.html) for writing the Makefile (rules, pattern rules, `.PHONY`).
 - Kernighan & Ritchie, *The C Programming Language*.
@@ -167,7 +167,7 @@ typedef struct s_list
 
 AI (Claude) was used for the following tasks:
 
-- Writing the `Makefile` and this `README.md`.
+- Writing the this `README.md`.
 - Explaining the expected behaviour of the `libc` functions and their edge cases while learning.
 
 The C source files were written, tested and reviewed by the author, who is able to explain every function.
