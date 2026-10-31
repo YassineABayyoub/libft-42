@@ -6,12 +6,11 @@
 /*   By: yabouayy <yabouayy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 02:05:27 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/10/31 06:40:01 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/10/31 09:24:17 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 int	ft_atoi(const char *str)
 {
