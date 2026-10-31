@@ -6,16 +6,18 @@
 /*   By: yabouayy <yabouayy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 02:05:27 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/10/22 02:06:48 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/10/31 06:40:01 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 int	ft_atoi(const char *str)
 {
-	int	result;
-	int	sign;
+	long	result;
+	int		sign;
+	int		digit;
 
 	result = 0;
 	sign = 1;
@@ -29,8 +31,13 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(*str))
 	{
-		result = result * 10 + (*str - '0');
+		digit = *str - '0';
+		if (sign == -1 && result > (result * 10 + digit))
+			return (0);
+		if (result > (result * 10 + digit))
+			return (-1);
+		result = result * 10 + digit;
 		str++;
 	}
-	return (result * sign);
+	return ((int)(result * sign));
 }
