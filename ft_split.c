@@ -6,79 +6,63 @@
 /*   By: yabouayy <yabouayy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 12:25:17 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/10/25 15:14:49 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/11/01 23:14:21 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-static int	ft_count_words(const char *s, char c)
+static int	count_words(const char *str, char c)
 {
 	int	count;
 	int	i;
 
 	count = 0;
 	i = 0;
-	while (s[i])
+	while (str[i])
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (s[i] && s[i] != c)
-		{
+		if ((i == 0 || str[i - 1] == c) && str[i] != c)
 			count++;
-			while (s[i] && s[i] != c)
-				i++;
-		}
+		i++;
 	}
 	return (count);
 }
 
-static char	**ft_free_all(char **result, int n)
+static char	*set_word(const char *str, int c)
 {
-	while (n > 0)
-	{
-		n--;
-		free(result[n]);
-	}
-	free(result);
-	return (NULL);
+	char	*dest;
+	int		count;
+
+	count = 0;
+	while (str[count] && str[count] != c)
+		count++;	
+	dest = malloc(count + 1);
+	if (!dest)
+		return (NULL);
+	ft_strlcpy(dest, str, count + 1);
+	return (dest);
 }
 
-static char	**ft_fill(char **result, const char *s, char c)
+char	**ft_split(const char *str, char c)
 {
-	int	i;
-	int	j;
-	int	start;
+	char	**dest;
+	int		i;
+	int		j;
+	int		lenght;
 
 	i = 0;
 	j = 0;
-	while (s[i])
+	lenght = count_words(str, c);
+	dest = (char **)malloc(lenght + 1);
+	if (!dest)
+		return (NULL);
+	while (str[i])
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		start = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (start < i)
-		{
-			result[j] = ft_substr(s, start, i - start);
-			if (!result[j])
-				return (ft_free_all(result, j));
-			j++;
-		}
+		if ((i == 0 || str[i - 1] == c) && str[i] != c)
+			dest[j++] = set_word(str + i, ' ');
+		i++;
 	}
-	result[j] = NULL;
-	return (result);
-}
-
-char	**ft_split(const char *s, char c)
-{
-	char	**result;
-
-	if (!s)
-		return (NULL);
-	result = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
-	if (!result)
-		return (NULL);
-	return (ft_fill(result, s, c));
+	dest[j] = NULL;
+	return (dest);
 }
