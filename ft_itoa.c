@@ -39,13 +39,13 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
-	if (num == 0)
-		str[0] = '0';
 	if (num < 0)
 	{
 		str[0] = '-';
 		num = -num;
 	}
+	if (num == 0)
+		str[0] = '0';
 	while (num > 0)
 	{
 		str[--len] = (num % 10) + '0';
@@ -53,3 +53,4 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
