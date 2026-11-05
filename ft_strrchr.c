@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 			last_occurrence = s;
 		s++;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 		return ((char *)s);
 	return ((char *)last_occurrence);
 }
