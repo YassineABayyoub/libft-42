@@ -62,12 +62,12 @@ char	**ft_split(const char *str, char c)
 	char	**dest;
 	int		i;
 	int		j;
-	int		lenght;
 
+	if (!str)
+		return (NULL);
 	i = 0;
 	j = 0;
-	lenght = count_words(str, c);
-	dest = malloc((lenght + 1) * sizeof(char *));
+	dest = malloc((count_words(str, c) + 1) * sizeof(char *));
 	if (!dest)
 		return (NULL);
 	while (str[i])
