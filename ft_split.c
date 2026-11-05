@@ -54,13 +54,23 @@ char	**ft_split(const char *str, char c)
 	i = 0;
 	j = 0;
 	lenght = count_words(str, c);
-	dest = (char **)malloc(lenght + 1);
+	dest = malloc((lenght + 1) * sizeof(char *));
 	if (!dest)
 		return (NULL);
 	while (str[i])
 	{
 		if ((i == 0 || str[i - 1] == c) && str[i] != c)
-			dest[j++] = set_word(str + i, ' ');
+		{
+			dest[j] = set_word(str + i, c);
+			if (dest[j] == NULL)
+			{
+				while (j > 0)
+					free(dest[--j]);
+				free(dest);
+				return (NULL);
+			}
+			j++;
+		}
 		i++;
 	}
 	dest[j] = NULL;
