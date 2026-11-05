@@ -21,7 +21,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	newsize;
 
 	newsize = count * size;
-	if(count == 0 || size == 0 || newsize / size != count)
+	if (count == 0 || size == 0 || newsize / size != count)
 		return (NULL);
 	ptr = malloc(newsize);
 	if (!ptr)

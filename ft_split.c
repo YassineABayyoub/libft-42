@@ -36,12 +36,25 @@ static char	*set_word(const char *str, int c)
 
 	count = 0;
 	while (str[count] && str[count] != c)
-		count++;	
+		count++;
 	dest = malloc(count + 1);
 	if (!dest)
 		return (NULL);
 	ft_strlcpy(dest, str, count + 1);
 	return (dest);
+}
+
+static void	free_all(char **dest)
+{
+	int	i;
+
+	i = 0;
+	while (dest[i])
+	{
+		free(dest[i]);
+		i++;
+	}
+	free(dest);
 }
 
 char	**ft_split(const char *str, char c)
@@ -63,12 +76,7 @@ char	**ft_split(const char *str, char c)
 		{
 			dest[j] = set_word(str + i, c);
 			if (dest[j] == NULL)
-			{
-				while (j > 0)
-					free(dest[--j]);
-				free(dest);
-				return (NULL);
-			}
+				return (free_all(dest), NULL);
 			j++;
 		}
 		i++;
