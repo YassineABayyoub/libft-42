@@ -16,7 +16,7 @@ The project is split in three parts:
 
 1. **Part 1 - Libc functions**: re-implementations of standard functions (`ft_strlen`, `ft_memcpy`, `ft_atoi`, ...).
 2. **Part 2 - Additional functions**: functions that are not in `libc`, or are available only in a different form (`ft_substr`, `ft_split`, `ft_itoa`, ...).
-3. **Bonus - Linked lists**: a `t_list` structure and the functions to create, modify, iterate over and free a singly linked list.
+3. **Part 3 - Linked lists**: a `t_list` structure and the functions to create, modify, iterate over and free a singly linked list.
 
 ## Instructions
 
@@ -29,7 +29,6 @@ The project is split in three parts:
 
 ```bash
 make          # builds libft.a (mandatory part)
-make bonus    # builds libft.a with the linked-list functions added
 make clean    # removes the object files
 make fclean   # removes the object files and libft.a
 make re       # fclean + all
@@ -167,7 +166,6 @@ typedef struct s_list
 
 AI (Claude) was used for the following tasks:
 
-- Writing the this `README.md`.
 - Explaining the expected behaviour of the `libc` functions and their edge cases while learning.
 
 The C source files were written, tested and reviewed by the author, who is able to explain every function.
