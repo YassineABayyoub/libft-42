@@ -43,14 +43,11 @@ static char	*set_word(const char *str, int c)
 	return (dest);
 }
 
-static void	free_all(char **dest)
+static void	free_all(char **dest, int n)
 {
-	int	i;
-
-	i = 0;
-	while (dest[i])
+	while (n--)
 	{
-		free(dest[i]);
+		free(dest[n]);
 		i++;
 	}
 	free(dest);
@@ -75,7 +72,7 @@ char	**ft_split(const char *str, char c)
 		{
 			dest[j] = set_word(str + i, c);
 			if (dest[j] == NULL)
-				return (free_all(dest), NULL);
+				return (free_all(dest, j), NULL);
 			j++;
 		}
 		i++;
