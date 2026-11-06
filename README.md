@@ -4,7 +4,7 @@
 
 ## Description
 
-**Libft** is the first project of the 42 common core. The goal is to build, from scratch, a static C library (`libft.a`) that re-implements a set of standard `libc` functions, adds a second set of useful utility functions, and (as a bonus) provides a small linked-list API.
+**Libft** is the first project of the 42 common core. The goal is to build, from scratch, a static C library (`libft.a`) that re-implements a set of standard `libc` functions, adds a second set of useful utility functions, and provides a small linked-list.
 
 The library is meant to be reused in every later 42 project, so it has to be:
 
@@ -33,8 +33,6 @@ make clean    # removes the object files
 make fclean   # removes the object files and libft.a
 make re       # fclean + all
 ```
-
-The Makefile does not relink: running `make` or `make bonus` twice in a row does nothing the second time.
 
 ### Usage
 
