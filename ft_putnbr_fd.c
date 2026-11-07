@@ -6,7 +6,7 @@
 /*   By: yabouayy <yabouayy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 15:47:33 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/11/07 08:46:14 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/11/07 08:53:15 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n >= 10)
 		ft_putnbr_fd(n / 10, fd);
 	c = n % 10 + '0';
-	write(fd, &n, 1);
+	write(fd, &c, 1);
 }
