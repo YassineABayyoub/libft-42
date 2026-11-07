@@ -166,4 +166,4 @@ AI (Claude) was used for the following tasks:
 
 - Explaining the expected behaviour of the `libc` functions and their edge cases while learning.
 
-The C source files were written, tested and reviewed by the author, who is able to explain every function.
+git@vogsphere.1337.ma:vogsphere/intra-uuid-1b44d926-0063-4c46-80ce-054d44c7676d-7790238-yabouayy The C source files were written, tested and reviewed by the author, who is able to explain every function.

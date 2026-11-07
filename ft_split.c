@@ -6,7 +6,7 @@
 /*   By: yabouayy <yabouayy@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 12:25:17 by yabouayy          #+#    #+#             */
-/*   Updated: 2026/11/01 23:14:21 by yabouayy         ###   ########.fr       */
+/*   Updated: 2026/11/07 08:37:52 by yabouayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ static void	free_all(char **dest, int n)
 	while (n--)
 	{
 		free(dest[n]);
-		i++;
 	}
 	free(dest);
 }
