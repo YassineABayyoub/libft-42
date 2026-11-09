@@ -56,6 +56,9 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
+%.o: %.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
 	$(RM) $(OBJS) 
 
@@ -65,3 +68,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+.SECONDARY: $(OBJS)
